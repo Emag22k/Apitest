@@ -21,4 +21,4 @@ def test_update_user(user_payload):
 def test_update_nonexistent_user(user_payload):
     """Негативный тест: обновление несуществующего пользователя"""
     response = requests.patch(f"{BASE_URL}/users/9999", json=user_payload)
-    assert response.status_code in [404, 200], "Код ответа может быть 404 или 200 в зависимости от API"
+    assert response.status_code in [404, 200], "Код ответа может быть 404 или 200"
