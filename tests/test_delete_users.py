@@ -16,4 +16,4 @@ def test_delete_user():
 def test_delete_nonexistent_user():
     """Негативный тест: удаление несуществующего пользователя"""
     response = requests.delete(f"{BASE_URL}/users/998855")
-    assert response.status_code in [204, 404], "API может вернуть 204 или 404"
+    assert response.status_code in [204, 404], "Может вернуть 204 или 404"
